@@ -1,0 +1,24 @@
+<div class="section--generic">
+    <h1 class="section--generic_title" style="color: aliceblue;">{{ title }}</h1>
+
+    <div class="section--generic_player--zone">
+        <ul class="player--list" [ngClass]="{'card-small': mode === 'small', 'card-big': mode === 'big'}">
+            <li *ngFor="let movie of dataMovies">
+                <app-card-movie [movie]="movie" [mode]="mode" ></app-card-movie>
+            </li>
+        </ul>
+    </div>
+</div>
+
+
+<!-- <div class="section--generic">
+    <h1 class="section--generic__title">{{title}}</h1>
+
+    <div class="section--generic__player--zone">
+        <ul class="player--list" [ngClass]="{'card-small':mode === 'small','card-big':mode === 'big'}">
+            <li *ngFor="let track of dataMovies">
+                <app-card-player ></app-card-player>
+            </li>
+        </ul>
+    </div>
+</div> -->

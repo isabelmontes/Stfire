@@ -1,0 +1,106 @@
+{
+    "data": [
+        {
+            "_id": 1,
+            "name": "Spirit: El corcel indomable",
+            "director": "Kelly Asbury",
+            "genre": "Infantil",
+            "year": 2002,
+            "actor": {
+                "name": "Matt Dammon",
+                "rol": "Spirit",
+                "nationality": "AM"
+            },
+            "duration": {
+                "duracion": "2:00HRS"
+            },
+            "url": "http://localhost:3000/algoaqui.mp3",
+            "cover": "https://upload.wikimedia.org/wikipedia/en/3/3b/Spirit_Stallion_of_the_Cimarron_poster.jpg"
+        },
+        {
+            "_id": 2,
+            "name": "Eternal Sunshine of spotless mind",
+            "director": "Michel Gondry",
+            "genre": "Romance",
+            "year": 2004,
+            "actor": {
+                "name": "Jim Carrey",
+                "rol": "Joe Barish",
+                "nationality": "AM"
+            },
+            "duration": {
+                "duracion": "1:48HRS"
+            },
+            "url": "http://localhost:3000/algoaqui.mp3", 
+            "cover": "http://aureavisurarevista.fad.unam.mx/wp-content/uploads/2017/10/Eternal_Sunshine_of_the_Spotless_Mind-620x930.jpg"
+        },
+        {
+            "_id": 3,
+            "name": "Gato con botas: el último deseo",
+            "director": "Joel Crawford",
+            "genre": "Aventura",
+            "year": 2022,
+            "actor": {
+                "name": "Antonio Banderas",
+                "rol": "Gato",
+                "nationality": "ES"
+            },
+            "duration": {
+                "duracion": "1:42HRS"
+            },
+            "url": "http://localhost:3000/algoaqui.mp3", 
+            "cover": "https://image.tmdb.org/t/p/original/1NqwE6LP9IEdOZ57NCT51ftHtWT.jpg"
+        },
+        {
+            "_id": 4,
+            "name": "Háblame",
+            "director": "Danny Philippou, Michael Philippou",
+            "genre": "Terror",
+            "year": 2023,
+            "actor": {
+                "name": "Sophie Wilde",
+                "rol": "Mia",
+                "nationality": "AM"
+            },
+            "duration": {
+                "duracion": "1:35HRS"
+            },
+            "url": "http://localhost:3000/algoaqui.mp3", 
+            "cover": "https://alternativemovieposters.com/wp-content/uploads/2023/10/Jason-Ragosta_TalkToMe.jpg"
+        },
+        {
+            "_id": 5,
+            "name": "Como si fuera la primera vez",
+            "director": "Peter Segal",
+            "genre": "Comedia",
+            "year": 2004,
+            "actor": {
+                "name": "Adam Sandler",
+                "rol": "Henry",
+                "nationality": "AM"
+            },
+            "duration": {
+                "duracion": "1:46HRS"
+            },
+            "url": "http://localhost:3000/algoaqui.mp3", 
+            "cover": "https://content1.jdmagicbox.com/comp/jd_social/news/2018jul17/image-86355-42dvo5gri2.jpg"
+        },
+        {
+            "_id": 6,
+            "name": "Líbranos del mal",
+            "director": "Scott Derrickson",
+            "genre": "Terror",
+            "year": 2014,
+            "duration": "1:58HRS",
+            "actor": {
+                "name": "Eric Bana",
+                "rol": "Ralph Ramiro",
+                "nationality": "AM"
+            },
+            
+            "url": "http://localhost:3000/algoaqui.mp3", 
+            "cover": "https://pics.filmaffinity.com/deliver_us_from_evil-722448802-large.jpg"
+        }
+
+    ]
+}
