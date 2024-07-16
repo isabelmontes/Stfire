@@ -4,10 +4,6 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: HomePageComponent
-  },
-  {
     path: 'movies',
     loadChildren: () => import('@modules/movies/movies.module').then(m => m.MoviesModule)
   },

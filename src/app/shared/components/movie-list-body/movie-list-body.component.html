@@ -1,0 +1,36 @@
+<div class="play-list-body">
+    <ul class="play-list-table-header">
+        <li >Nombre</li>
+        <li >Generó</li>
+        <li>Año</li>
+        <li>Duración<i class="uil uil-clock-eight"></i></li>
+    </ul>
+    <ul class="play-list-rows" *ngFor="let item of movies |orderList:'title':'asc'">
+        <li class="track-name">
+            <ng-container *ngTemplateOutlet="coverSection;context:{movies:item}"></ng-container>
+        </li>
+        <li class="track-name-opacity">
+            🎬{{item.genre}}
+        </li>
+        <li class="track-name-opacity">
+            {{item.year}}
+        </li>
+        <li class="track-name-opacity">
+            {{item.duration}}
+        </li>
+
+    </ul>
+</div>
+
+<!--template del cover-->
+<ng-template #coverSection let-movies="movies">
+
+    <div class="cover-section">
+        <img appImgBroken class="cover-track" [src]="movies.cover" [alt]="">
+        <div class="cover-info">
+            <div class="name-track">{{movies.name}}</div>
+            <div class="name-track-details">{{movies.director}}</div>
+        </div>
+    </div>
+
+</ng-template>

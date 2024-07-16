@@ -16,3 +16,5 @@
 .section--generic_player--zone .player--list.card-big {
     grid-template-columns: repeat(6, minmax(100px, 1fr));
 }
+
+

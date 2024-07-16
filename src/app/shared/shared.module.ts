@@ -5,6 +5,10 @@ import { MoviePlayerComponent } from './components/movie-player/movie-player.com
 import { HeaderUserComponent } from './components/header-user/header-user.component';
 import { CardMovieComponent } from './components/card-movie/card-movie.component';
 import { SectionGenericComponent } from './components/section-generic/section-generic.component';
+import { MovieListHeaderComponent } from './components/movie-list-header/movie-list-header.component';
+import { MovieListBodyComponent } from './components/movie-list-body/movie-list-body.component';
+import { RouterLink, RouterModule } from '@angular/router';
+import { OrderListPipe } from './pipe/order-list.pipe';
 
 
 
@@ -14,17 +18,24 @@ import { SectionGenericComponent } from './components/section-generic/section-ge
     MoviePlayerComponent,
     HeaderUserComponent,
     CardMovieComponent,
-    SectionGenericComponent
+    SectionGenericComponent,
+    MovieListHeaderComponent,
+    MovieListBodyComponent,
+    OrderListPipe
   ],
   imports: [
-    CommonModule
+    CommonModule, 
+    RouterModule
   ], 
   exports:[
     SideBarComponent,
     MoviePlayerComponent,
     HeaderUserComponent, 
     CardMovieComponent, 
-    SectionGenericComponent
+    SectionGenericComponent, 
+    MovieListHeaderComponent,
+    MovieListBodyComponent, 
+    OrderListPipe
   ]
 })
 export class SharedModule { }
