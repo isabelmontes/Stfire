@@ -16,13 +16,13 @@
   
   <!-- Diseño del modo (big) -->
   <div *ngIf="mode==='big'" class="card-player player-big">
-    <img [src]="movie.cover" [alt]="movie.name" class="cover">
+    <img appImgBroken [src]="movie.cover" [alt]="movie.name" class="cover">
     <div class="content-player">
       <div class="title-track" style="font-size: .8em; color: aliceblue;" >{{ movie.name }}</div>
       <div class="sub-title-track">{{ movie.year}}</div>
     </div>
     <div class="buttons-player">
-      <button *ngIf="true" class="play-btn">
+      <button (click)="sendPlay(movie)"*ngIf="true" class="play-btn">
         <i class="uil uil-play"></i>
       </button>
       <button *ngIf="false" class="play-btn">

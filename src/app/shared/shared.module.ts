@@ -9,6 +9,7 @@ import { MovieListHeaderComponent } from './components/movie-list-header/movie-l
 import { MovieListBodyComponent } from './components/movie-list-body/movie-list-body.component';
 import { RouterLink, RouterModule } from '@angular/router';
 import { OrderListPipe } from './pipe/order-list.pipe';
+import { ImgBrokenDirective } from './directives/img-broken.directive';
 
 
 
@@ -21,7 +22,8 @@ import { OrderListPipe } from './pipe/order-list.pipe';
     SectionGenericComponent,
     MovieListHeaderComponent,
     MovieListBodyComponent,
-    OrderListPipe
+    OrderListPipe,
+    ImgBrokenDirective
   ],
   imports: [
     CommonModule, 
@@ -35,7 +37,8 @@ import { OrderListPipe } from './pipe/order-list.pipe';
     SectionGenericComponent, 
     MovieListHeaderComponent,
     MovieListBodyComponent, 
-    OrderListPipe
+    OrderListPipe, 
+    ImgBrokenDirective
   ]
 })
 export class SharedModule { }

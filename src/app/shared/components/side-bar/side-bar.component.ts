@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { MovieService } from '@modules/movies/services/movie.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -17,7 +18,7 @@ export class SideBarComponent implements OnInit {
   customOptions: Array<any>= []
 
 
-  constructor(private router:Router) { }
+  constructor(private router:Router, private movieService: MovieService) { }
 
   ngOnInit(): void {
     this.mainMenu.defaultOptions = [
@@ -29,7 +30,7 @@ export class SideBarComponent implements OnInit {
       {
         name: 'Home',
         icon: 'uil uil-estate',
-        router: ['/', 'home']
+        router: ['/', 'auth']
       },
       {
         name: 'Buscar',
@@ -60,23 +61,27 @@ export class SideBarComponent implements OnInit {
     ]
 
     this.customOptions = [
-      // {
-      //   name: 'Mi lista º1',
-      //   router: ['/']
-      // },
-      // {
-      //   name: 'Mi lista º2',
-      //   router: ['/']
-      // },
-      // {
-      //   name: 'Mi lista º3',
-      //   router: ['/']
-      // },
-      // {
-      //   name: 'Mi lista º4',
-      //   router: ['/']
-      // }
+       {
+         name: 'Mi lista º1',
+         router: ['/']
+       },
+       {
+         name: 'Mi lista º2',
+         router: ['/']
+       },
+     
     ]
+
+    this.movieService.dataSeriesRandom$
+    .subscribe((response: any) =>{
+       this.customOptions.push(
+        {
+          name: response[0].name,
+          router:[]
+        }
+       )
+    })
+
 
   }
 

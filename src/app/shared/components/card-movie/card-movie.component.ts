@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { MovieModel } from '@core/models/movies.model';
+import { MultimediaService } from '@shared/services/multimedia.service';
 
 @Component({
   selector: 'app-card-movie',
@@ -16,9 +17,14 @@ export class CardMovieComponent implements OnInit {
     duration:'',
     url: '',};
 
-  constructor() { }
+  constructor( private multimediaService: MultimediaService) {  }
 
   ngOnInit(): void {
+  }
+
+  sendPlay(movie: MovieModel): void{
+
+    this.multimediaService.callback.emit(movie)
   }
 
 }
