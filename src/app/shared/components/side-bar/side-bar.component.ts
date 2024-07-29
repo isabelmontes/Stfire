@@ -18,70 +18,57 @@ export class SideBarComponent implements OnInit {
   customOptions: Array<any>= []
 
 
-  constructor(private router:Router, private movieService: MovieService) { }
+  constructor(private router:Router) { }
 
   ngOnInit(): void {
     this.mainMenu.defaultOptions = [
-      // {
-      //   name: 'Home',
-      //   icon: 'uil uil-estate',
-      //   router: ['/', 'auth']
-      // },
       {
         name: 'Home',
         icon: 'uil uil-estate',
         router: ['/', 'auth']
       },
       {
+        name: 'Peliculas',
+        icon: 'uil uil-film',
+        router: ['/', 'movies']
+      },
+      {
+        name: 'Series',
+        icon: 'uil uil-tv-retro',
+        router: ['/', 'movies']
+      },
+      {
         name: 'Buscar',
         icon: 'uil uil-search',
         router: ['/', 'history']
       },
-      {
-        name: 'Movies',
-        icon: 'uil uil-chart',
-        router: ['/', 'movies']
-      },
-      {
-        name: 'Favorites',
-        icon: 'uil-heart-medical',
-        router: ['/', 'favorites']
-      }
+
+    
     ]
 
     this.mainMenu.accessLink = [
       {
-        name: 'Crear lista',
-        icon: 'uil-plus-square'
-      },
-      {
         name: 'Favoritas',
-        icon: 'uil-heart-medical'
-      }
+        icon: 'uil uil-heart',
+        router: ['/', 'favorites']
+      },
+      // {
+      //   name: 'Favoritas',
+      //   icon: 'uil-heart-medical'
+      // }
     ]
 
-    this.customOptions = [
-       {
-         name: 'Mi lista º1',
-         router: ['/']
-       },
-       {
-         name: 'Mi lista º2',
-         router: ['/']
-       },
+    // this.customOptions = [
+    //    {
+    //      name: 'Mi lista º1',
+    //      router: ['/']
+    //    },
+    //    {
+    //      name: 'Mi lista º2',
+    //      router: ['/']
+    //    },
      
-    ]
-
-    this.movieService.dataSeriesRandom$
-    .subscribe((response: any) =>{
-       this.customOptions.push(
-        {
-          name: response[0].name,
-          router:[]
-        }
-       )
-    })
-
+    // ]
 
   }
 

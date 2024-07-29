@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieModel } from '@core/models/movies.model';
-import * as dataRaw from '../../../../data/movies.json'
 import { MovieService } from '@modules/movies/services/movie.service';
 import { Subscription } from 'rxjs';
 
@@ -18,25 +17,28 @@ export class MoviesPageComponent implements OnInit {
   constructor(private movieService: MovieService) { }
 
   ngOnInit(): void {
-    const observer1$ = this.movieService.dataMoviesTrending$
-      .subscribe(response => {
-        this.moviesTrending = response
-        this.seriesRandom = response
-        console.log('Movies trending--->',response)
-      })
+    this.loadDataAll()
+    this.loadDataRandom()
+// this.movieService.getAllMovies$()
+    // .subscribe((response: MovieModel[])=> {
+    //   this.moviesTrending = response
+    // })
+  }
 
-    const observer2$ = this.movieService.dataSeriesRandom$
-      .subscribe(response => {
-        this.seriesRandom = [...this.seriesRandom, ...response]
-        console.log('Series random akui--->',response)
-      })
+  async loadDataAll(): Promise<any> {
+    this.moviesTrending = await this. movieService.getAllMovies$().toPromise(), 
+    this.seriesRandom = await this.movieService.getAllRandom$().toPromise()
+  }
 
-
-    this.listObservers$ = [observer1$, observer2$]
+  loadDataRandom():void{
+     this.movieService.getAllRandom$()
+     .subscribe((response: MovieModel[])=> {
+      this.seriesRandom = response
+     })
   }
 
   ngOnDestroy(): void {
-    this.listObservers$.forEach(u => u.unsubscribe())
+
   }
 
 }

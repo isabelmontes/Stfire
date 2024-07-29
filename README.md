@@ -1,6 +1,6 @@
 # StfireA
 
-Este es una parte del proyecto desarrollado en angular como una aplicación de entretenimiento.
+Este es una parte del proyecto desarrollado en angular como una aplicación de entretenimiento. En este sprint se trabaja con la integración de una API y la normalización de una base de datos con MySQL y T-SQL-
 
 *Nombre del proyecto*: StFire
 *Nombre de desarrolladora:* Isabel F. Montes
@@ -9,13 +9,16 @@ Este es una parte del proyecto desarrollado en angular como una aplicación de e
 ---
 
 ## Descripción
-En el sprint 2, se ha trabajado con la estructura del framework angular para poder crear un sitio de entretenimiento de reproducción de peliculas. 
+En el sprint 4, se ha trabajado con la estructura del framework angular para poder crear un sitio de entretenimiento de reproducción de peliculas, en el cuarto sprint se integra la base de datos, asi como la conexión con una api para poder alimentarla. 
+
 
 ## Requerimientos tecnicos
 
 -Angular v.12-2-0
 -NodeJS v. 14.17.6
 -VS Code
+-My SQL Serve(instalación)
+-SSMS
 
 ## Instalación
 
@@ -23,39 +26,48 @@ En el sprint 2, se ha trabajado con la estructura del framework angular para pod
 2. Establecer una carpeta 
 3. Creación del proyecto
 4. npm install
+5. Instalación de MySQL Serve 2022 y SSMS 2022
 
 ---
 
 ## Capturas
 
-![ST1](./capturas/imagenes/St1.jpg)
-Este es una imagen general de la primera vista del proyecto con dos secciones principales
+Proceso de trabajo:
 
-![ST2](./capturas/imagenes/St2.jpg)
-Contiene un sidebar para navegación mas simple
+Diseño de la BD en un  digrama para poder implementarlo por medio de sql. 
 
-![ST3](./capturas/imagenes/St3.jpg)
-Vistas indivuales de las cards con el reproductor de peliculas
 
-![ST4](./capturas/imagenes/St4.jpg)
-Vistas de las dos secciones juntas
+![ST1](./capturas/imagenes/DiagramDB.jpg)
+Estas son las tablas usadas en esta version para integrarse en el proyecto
+
+![ST2](./capturas/imagenes/UserTable.jpg)
+Para despues crear nuevas consultas y crear las tablas. 
+
+![ST3](./capturas/imagenes/script.jpg)
+El Script de dicho trabajo se encuentra dentro del mismo proyecto exportado .sql
+
+![ST4](./capturas/imagenes/procedimiento.jpg)
+Intente agregar algunas funciones y procesos aunque me fue un poco confunso y no resulto del todo
+
+![ST5](./capturas/imagenes/api.jpg)
+![ST5](./capturas/imagenes/cargaSTfireAPI.jpg)
+Tome como referencia la API usada en el curso de angular para poder conectar mi proyecto de manera exitosa
+y los archivos cargados ahora provienen de dicha API susbcrita a los servcios
+
+![ST5](./capturas/imagenes/enviroment.jpg)
+Configurando el archivo .enviorement para poder hacer que se conectara y obtuviera la información de manera dinámica fuera del proyecto
 
 ## Proceso
 
-Revisando el curso que se nos brindo de angular, pude tomarlo como base de aprendrizaje para realizar el hub de entretenimiento solicitado. Usando herramientas disponibles de otros lenguajes, pude adaptar las manera de mostrar las vistas. 
+Estuve revisando los cursos brindamos para poder integrar las tecnologias al proyecto de angular, y me parecio interesante como se debe tener el seguimiento de separar y hacer escalable el sistema con las APIs. 
 
-Al mostrar la información en las sección general se busco la manera de mostrar lo más escencial, el uso de los modulos, rutas dentro de los componentes por medio de las configuraciónes de las mismas me permitio comprender la importancía de los mismos para poder hacer que un sistema tan escalable sea creado desde el principio. 
-
-Los desafios al usar herramientas de angular fueron bastos, pero con la dedicación en el tiempo dado me ha permitido ampliar mi panorama de programación. Así como hacer uso de similes con otros frameworks como laravel para poder entender conceptos usados en angular. 
-
-La cuestión de enrutamiento  y enlace correcto de los modulos es algo en lo que aún estoy trabajando por poder hacer de forma más concistente, eficiente y sin  errores. 
-
+Anteriormente había trabajado con el SQL, sin embargo represento un reto comprender y hacer uso de herramientas más complejas para implementar un sistema de manera adecuado con T-SQL y la parte de conectar a los servidores. Así como comprender la funcionalidad de distintas carpetas que brinda angular como .env, que además de las pruebas que se pueden realizar, también ayudan con la conexiones que se realizan. 
 ## Problemas presentados
 
-- Instalación de las versiones de angular solicitadas
-- Falta de expertis en el desarrollo de proyectos con Angular
-- Fallos en la consola cuando se recargaba de manera constante 
-- Uso correcto y consistente de enlaces entre modulos y rutas 
+- Trabajo con herramienta distinta a la acostumbrada
+- Falta de expertis para T-SQL
+- Mejora de entedimiento de servidores, buenas practicas 
+- Relación de API y base de datos creada 
 
 # Mi Proyecto Angular
 
@@ -63,7 +75,7 @@ La cuestión de enrutamiento  y enlace correcto de los modulos es algo en lo que
 
 | ¿Qué salió bien? | ¿Qué puedo hacer diferente? | ¿Qué no salió bien? |
 |------------------|-----------------------------|---------------------|
-| Salio bien la instalación de dependencias en angular para poder crear el poryecto, el uso de tiempo disponible para comprender el framework y el mostrar un poco de la información que el hub debe tebner  | Usar lineamientos de angular y aterrizar la manera en la que información se muestra, asì como estar aprendiendo de nuevas versiones de angular, hacer uso de mejor UX para el proyecto         | En el enrutamiento y el trabajo con diversos modulos para que mostraran la informacióm de manera adecuada. Culminacion de ambos sprints en tiempo    |
+| Salio bien la instalación de programas y enlaces con la API de prueba de angular | usar mejores practicas de porgramación, tener mayor expertis en la manera de crear y aplicar los procedemientos        | La conexión con el servidor y la implementación completa de las rutas con la base de datos    |
 |                  |                             |                     |
 
 

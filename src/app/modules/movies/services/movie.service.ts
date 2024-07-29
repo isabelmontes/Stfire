@@ -1,7 +1,12 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable, of} from 'rxjs';
+import { catchError, map, mergeMap, tap} from 'rxjs/operators';
+import { environment } from './../../../../environments/environment';
 import { MovieModel } from '@core/models/movies.model';
-import { observable, Observable, of} from 'rxjs'
-import * as dataRaw from '../../../data/movies.json'
+// import { MovieModel } from '@core/models/movies.model';
+// import { observable, Observable, of} from 'rxjs'
+
 
 
 @Injectable({
@@ -9,30 +14,39 @@ import * as dataRaw from '../../../data/movies.json'
 })
 export class MovieService {
 
-  dataMoviesTrending$: Observable<MovieModel[]> = of([])
-  dataSeriesRandom$: Observable<any> = of([])
+  private readonly URL = environment.api
 
-  constructor() {
-    const{ data}: any = (dataRaw as any).default;
-    
-    this.dataMoviesTrending$ = of(data)
+  constructor(private http: HttpClient) {
 
-    this.dataSeriesRandom$ = new Observable((observer)=>{
-      
-      const movieExample: MovieModel ={
-        _id: '4',
-        cover:'https://alternativemovieposters.com/wp-content/uploads/2023/10/Jason-Ragosta_TalkToMe.jpg',
-        name: 'Hablame',
-        director: 'dos youtiber',
-        genre: 'terror',
-        year:'2023',
-        duration:'2hrs',
-        url:'https://alternativemovieposters.com/wp-content/uploads/2023/10/Jason-Ragosta_TalkToMe.jpg'
-      }
-      setTimeout(()=>{
-        observer.next([movieExample])
-      }, 3500)
-      // observer.next([movieExample])
+  }
+
+  private skipById(listMovies: MovieModel[], id: string): Promise<MovieModel[]> {
+    return new Promise((resolve, reject) => {
+      const listTmp = listMovies.filter(a => a._id !== id)
+      resolve(listTmp)
     })
-   }
+
+  }
+
+  getAllMovies$(): Observable<any> {
+    return this.http.get(`${this.URL}/tracks `)
+      .pipe(
+        map(({ data }: any) => {
+          return data
+        })
+      )
+  }
+
+  getAllRandom$(): Observable<any> {
+    return this.http.get(`${this.URL}/tracks `)
+      .pipe(
+        mergeMap(({ data }: any) => this.skipById(data, '1')),
+
+        tap(data => console.log('TodoOK', data)),
+        catchError((err) => {
+          console.log('Algo paso revisame', [status]);
+          return of([])
+        })
+      )
+  }
 }
