@@ -51,27 +51,27 @@ dotnet tool update -g dotnet-aspnet-codegenerator
 
 ## Capturas
 
-![ST1](./capturas/imagenes/capturas/imagenes/1SP6.jpg)
+![ST1](./capturas/imagenes/1SP6.jpg)
 Estos son los archivos anexos para poder instalar y descargar la bd y la api para su instalación. 
 
-![ST2](./capturas/imagenes/capturas/imagenes/2SP6.jpg)
+![ST2](./capturas/imagenes/2SP6.jpg)
 La base de datos normalizada con sus correciones quedo así.
 
-![ST3](./capturas/imagenes/capturas/imagenes/3SP6.jpg)
+![ST3](./capturas/imagenes/3SP6.jpg)
 Una vez descargada e instalada la API se debe ver de la siguiente manera. 
 
-![ST4](./capturas/imagenes/capturas/imagenes/4SP6.jpg)
+![ST4](./capturas/imagenes/4SP6.jpg)
 Para verificar que las rutas que tenemos determinadas por metodos en la API se puede ver en la interfaz de swagger en el navegador.
 
-![ST5](./capturas/imagenes/capturas/imagenes/7SP6.jpg)
+![ST5](./capturas/imagenes/7SP6.jpg)
 Imagen creada en Docker, que se ejecuta por medio de la Docker desktop o por medio de la terminal en la api
-![ST5](./capturas/imagenes/capturas/imagenes/8SP6.jpg)
-![ST5](./capturas/imagenes/capturas/imagenes/9SP6.jpg)
+![ST5](./capturas/imagenes/8SP6.jpg)
+![ST5](./capturas/imagenes/9SP6.jpg)
 
-![ST5](./capturas/imagenes/capturas/imagenes/5SP6.jpg)
+![ST5](./capturas/imagenes/5SP6.jpg)
 El sitio debe mostrarse como se había estado trabajando antes y renderiza este templante
 
-![ST5](./capturas/imagenes/capturas/imagenes/6SP6.jpg)
+![ST5](./capturas/imagenes/6SP6.jpg)
 Login view
 
 
