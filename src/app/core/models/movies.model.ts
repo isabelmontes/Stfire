@@ -1,13 +1,12 @@
-import { ActorModel } from "./actor.model";
-
-export interface MovieModel{
-    _id:string;
-    cover:string;
+export interface MovieModel {
+    _id: string;
+    cover: string;
     name: string;
     director: string;
     genre: string;
-    year:string;
-    duration:string;
-    url:string;
-    actor?: ActorModel;
-}
+    year: string;
+    duration: string;
+    url: string;
+    type?: 'movie' | 'serie';  // Campo opcional para identificar si es una película o una serie
+  }
+  

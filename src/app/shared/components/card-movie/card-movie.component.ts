@@ -9,22 +9,28 @@ import { MultimediaService } from '@shared/services/multimedia.service';
 })
 export class CardMovieComponent implements OnInit {
   @Input() mode: 'small' | 'big' = 'small';
-  @Input() movie: MovieModel = {   _id: ' ',cover:'',
-    name:'',
+  @Input() movie: MovieModel = {
+    _id: ' ',
+    cover: '',
+    name: '',
     director: '',
     genre: '',
     year: '',
-    duration:'',
-    url: '',};
+    duration: '',
+    url: '',
+    type: 'movie' // Aquí estamos asegurándonos de incluir el campo `type`
+  };
 
-  constructor( private multimediaService: MultimediaService) {  }
+  constructor(private multimediaService: MultimediaService) {}
 
   ngOnInit(): void {
+    
+  console.log(this.movie);
+
+
   }
 
-  sendPlay(movie: MovieModel): void{
-
-    this.multimediaService.callback.emit(movie)
+  sendPlay(movie: MovieModel): void {
+    this.multimediaService.callback.emit(movie);
   }
-
 }

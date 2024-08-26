@@ -1,7 +1,11 @@
 <div class="movies-page">
-    <!--section top (small)-->
-    <app-section-generic [dataMovies]="moviesTrending" [mode]="'big'" [title]="'Peliculas'"></app-section-generic>
-    <!--section medium (big)-->
-    <app-section-generic [dataMovies]="seriesRandom" [mode]="'big'" [title]="'Series'">
-    </app-section-generic>
+    <!-- Sección para Películas -->
+    <app-section-generic [dataMovies]="moviesTrending" [mode]="'big'" [title]="'Películas'"></app-section-generic>
+
+    <!-- Sección para Series -->
+    <app-section-generic [dataMovies]="seriesRandom" [mode]="'small'" [title]="'Series'"></app-section-generic>
 </div>
+
+
+
+  

@@ -1,0 +1,6 @@
+@ApiSTFireHub_HostAddress = http://localhost:5104
+
+GET {{ApiSTFireHub_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
