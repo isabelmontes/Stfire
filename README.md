@@ -33,7 +33,7 @@ En el sprint 6 se trabajan con tecnologias como mysql, manejon del framework ang
 8. Instalacion de API,con creacion de proyecto VS  Code. 
 9. Correr API en terminal del protecto."do net run"
 
-## Dependecias
+## Dependecias generales
 
 1. HTTP client para angular(import { HttpClient } from '@angular/common/http';)
 2. DockerFile v.24.0.1(FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build)
@@ -49,6 +49,9 @@ Package Microsoft.EntityFrameworkCore.Design
 - dotnet add package Microsoft.EntityFrameworkCore.SqlServer
 - dotnet add package Microsoft.EntityFrameworkCore.Tools
 - dotnet tool update -g dotnet-aspnet-codegenerator
+
+## Diagrama ER
+![ST1](./capturas/imagenes/13SP6.jpg)
 
 ## API Documentación 
 
