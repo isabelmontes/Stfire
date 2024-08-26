@@ -41,6 +41,7 @@ En el sprint 6 se trabajan con tecnologias como mysql, manejon del framework ang
 Package Pomelo.EntityFrameworkCore.MySql
 Package Microsoft.EntityFrameworkCore.Design
 (install en api antes de comenzar)
+4. En Docker instalar Kubernetes Kubernetes v1.27.2
 
 ## Paquetes de instalacion para api en proyecto:
 - dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
@@ -76,6 +77,11 @@ Para verificar que las rutas que tenemos determinadas por metodos en la API se p
 Imagen creada en Docker, que se ejecuta por medio de la Docker desktop o por medio de la terminal en la api
 ![ST5](./capturas/imagenes/8SP6.jpg)
 ![ST5](./capturas/imagenes/9SP6.jpg)
+
+
+![ST5](./capturas/imagenes/11SP6.jpg)
+Verificar y correr el archivo .yaml que se creo para kubernetes en este caso en la API
+![ST5](./capturas/imagenes/12SP6.jpg)
 
 ![ST5](./capturas/imagenes/5SP6.jpg)
 El sitio debe mostrarse como se había estado trabajando antes y renderiza este templante
