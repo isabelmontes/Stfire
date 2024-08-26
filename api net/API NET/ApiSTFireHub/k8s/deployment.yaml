@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: stfirehub-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: stfirehub
+  template:
+    metadata:
+      labels:
+        app: stfirehub
+    spec:
+      containers:
+      - name: stfirehub-container
+        image: stfirehub:latest
+        ports:
+        - containerPort: 80
