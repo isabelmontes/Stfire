@@ -20,6 +20,7 @@ En el sprint 6 se trabajan con tecnologias como mysql, manejon del framework ang
 -My SQL Serve(instalación)
 -SSMS
 -Docker v.4.0.18
+-Kubernetes v1.27.2
 
 ## Instalación
 
