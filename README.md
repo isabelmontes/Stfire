@@ -41,12 +41,20 @@ Package Pomelo.EntityFrameworkCore.MySql
 Package Microsoft.EntityFrameworkCore.Design
 (install en api antes de comenzar)
 
-Paquetes de instalacion para api en proyecto:
-dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
-dotnet add package Microsoft.EntityFrameworkCore.Design
-dotnet add package Microsoft.EntityFrameworkCore.SqlServer
-dotnet add package Microsoft.EntityFrameworkCore.Tools
-dotnet tool update -g dotnet-aspnet-codegenerator
+## Paquetes de instalacion para api en proyecto:
+- dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+- dotnet add package Microsoft.EntityFrameworkCore.Design
+- dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+- dotnet add package Microsoft.EntityFrameworkCore.Tools
+- dotnet tool update -g dotnet-aspnet-codegenerator
+
+## API Documentación 
+
+La API, usada y anexada en el proyecto es una creada con ASP.Net, programada con el uso de controladores, modelos para la solicitud de diversos metodos de consulta que responden a las necesidades del sitio STFireHub, siguiendo el Modelo Vista Controlador, contando con modelos para sus diversas entidades y construida por medio de 
+ASP .Net core usando el lenguaje c# para los archivos e implementando tecnologia de Dockerfile para creación de imagenes. 
+
+![ST1](./capturas/imagenes/19SP6.jpg)
+Estos son los archivos anexos para poder instalar y descargar la bd y la api para su instalación. 
 
 
 ## Capturas
